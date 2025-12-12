@@ -16,16 +16,29 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
+      # Node.js セットアップ
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: "pnpm"
 
-      - run: npm ci
-      - run: npm run build
+      # pnpm セットアップ
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+          run_install: false
 
+      # 依存関係インストール
+      - run: pnpm install --frozen-lockfile
+
+      # ビルド
+      - run: pnpm build
+
+      # dist を Pages 用アーティファクトとしてアップロード
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -36,6 +49,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
