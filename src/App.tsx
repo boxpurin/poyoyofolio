@@ -45,7 +45,8 @@ const FrameworkOrLibrarySkills: SkillRow[] = [
   { skill: "Axum(Rust)" },
   { skill: ".NET Framework(C#)", desc: "1年程度" },
   { skill: "WPF(C#)", desc: "1年程度" },
-  { skill: "React", desc: "数カ月" },
+  { skill: "PySide2", desc: "数カ月" },
+  { skill: "React", desc: "" },
 ];
 
 // データストア/ミドルウェア
