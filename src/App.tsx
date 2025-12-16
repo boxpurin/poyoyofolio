@@ -37,7 +37,7 @@ const langSkills: SkillRow[] = [
   { skill: "C#", desc: "1年程度" },
   { skill: "Rust" },
   { skill: "TypeScript" },
-  { skill: "Python3", desc: "数カ月" },
+  { skill: "Python3", desc: "6カ月" },
 ];
 
 // フレームワーク・ライブラリ
@@ -45,7 +45,7 @@ const FrameworkOrLibrarySkills: SkillRow[] = [
   { skill: "Axum(Rust)" },
   { skill: ".NET Framework(C#)", desc: "1年程度" },
   { skill: "WPF(C#)", desc: "1年程度" },
-  { skill: "PySide2", desc: "数カ月" },
+  { skill: "PySide2", desc: "6ヶ月" },
   { skill: "React", desc: "" },
 ];
 
@@ -337,7 +337,7 @@ export default function App() {
             </RepositoryInfoPaper>
             <RepositoryInfoPaper
               title={"Portfolio Page"}
-              comment={"このWebページです。"}
+              comment={"このポートフォリオサイトのリポジトリです。"}
             >
               <Box sx={{ width: "100%" }}>
                 <CustomMarkdown>{Item2Md}</CustomMarkdown>
