@@ -202,6 +202,15 @@ const RepositoryInfoPaper = (props: RepositoryInfoPaper) => {
           paddingBottom: 2,
           width: 350,
           borderRadius: "10px",
+          transition: "all 0.1s ease-in-out",
+          ":hover": {
+            boxShadow: "0 0 0 2px rgba(0, 0, 0, 1.0)",
+            cursor: "pointer",
+          },
+          ":active": {
+            boxShadow: "0 0 0 8px rgba(0, 0, 0, 0.1)",
+            cursor: "pointer",
+          },
         }}
         onClick={() => {
           setModalOpen(true);
