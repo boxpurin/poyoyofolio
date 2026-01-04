@@ -34,7 +34,7 @@ interface SkillRow {
 // プログラミング言語
 const langSkills: SkillRow[] = [
   { skill: "Visual C++" },
-  { skill: "C#", desc: "1年程度" },
+  { skill: "C#", desc: "1年" },
   { skill: "Rust" },
   { skill: "TypeScript" },
   { skill: "Python3", desc: "6カ月" },
@@ -43,15 +43,15 @@ const langSkills: SkillRow[] = [
 // フレームワーク・ライブラリ
 const FrameworkOrLibrarySkills: SkillRow[] = [
   { skill: "Axum(Rust)" },
-  { skill: ".NET Framework(C#)", desc: "1年程度" },
-  { skill: "WPF(C#)", desc: "1年程度" },
+  { skill: ".NET Framework(C#)", desc: "1年" },
+  { skill: "WPF(C#)", desc: "1年" },
   { skill: "PySide2", desc: "6ヶ月" },
   { skill: "React", desc: "" },
 ];
 
 // データストア/ミドルウェア
 const DatastoreSkills: SkillRow[] = [
-  { skill: "SQLite", desc: "半年程度" },
+  { skill: "SQLite", desc: "6ヶ月" },
   { skill: "Meilisearch" },
 ];
 
@@ -61,8 +61,8 @@ const toolSkills: SkillRow[] = [
   { skill: "Git / GitHub" },
   { skill: "Docker / Docker Compose" },
   { skill: "Vim" },
-  { skill: "VSCode", desc: "半年程度" },
-  { skill: "Visual Studio", desc: "1年程度" },
+  { skill: "VSCode", desc: "6ヶ月" },
+  { skill: "Visual Studio", desc: "1年" },
 ];
 
 
