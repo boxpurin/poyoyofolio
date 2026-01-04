@@ -295,25 +295,32 @@ export default function App() {
   return (
     <>
       <Container
-        sx={{ bgcolor: theme.palette.primary.main, Width: "100%" }}
+        sx={{ bgcolor: theme.palette.primary.main, Width: "100%", py: 4 }}
       >
         <header>
-          <Box sx={{ py: 4 }}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Box sx={{ display: "flex", flexGrow: 1 }}>
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
               Portfolio
+            </Typography>
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+              <a href="#about">About</a>
+            </Typography>
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+              <a href="#skills">Skills</a>
+            </Typography>
+            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+              <a href="#repositories">Repositories</a>
             </Typography>
           </Box>
         </header>
       </Container>
       <main className="App">
-        <Stack useFlexGap spacing={2} sx={{ alignItems: "center", my: 4, maxWidth: 800 }}>
-          <Typography variant="h4">About</Typography>
+        <Stack id="main-content" useFlexGap spacing={2} sx={{ alignItems: "center", my: 4, maxWidth: 800 }}>
+          <Typography id="about" variant="h4">About</Typography>
           <Paper sx={{ width: "50%", minWidth: 350, textAlign: "left", p: 2 }}>
             <CustomMarkdown>{AboutMd}</CustomMarkdown>
           </Paper>
-          <Box>
-            <Typography variant="h4">Skill</Typography>
-          </Box>
+          <Typography id="skills" variant="h4">Skills</Typography>
           <Stack
             direction="row"
             useFlexGap
@@ -326,7 +333,7 @@ export default function App() {
             <SkillSheetTable label="クラウド/開発/運用" rows={toolSkills} />
           </Stack>
 
-          <Typography variant="h4">Repository</Typography>
+          <Typography id="repositories" variant="h4">Repositories</Typography>
           <Stack
             direction="row"
             useFlexGap
